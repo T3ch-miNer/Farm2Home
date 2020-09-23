@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>Sign up form for customers</title>
+        
+        <script>
+            function fn()
+            {
+                if(document.frm.pswd.value!=document.frm.cpswd.value)
+                {
+                 alert("Passwords not same");
+                 return false;
+                }
+            }
+        </script>
+		<style>
+	
+            body
+            {
+                background-repeat: no-repeat;
+                background-size:cover;
+
+            }
+    
+    	ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #BDF5BD;
+            }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+    
+}
+
+li a:hover {
+    background-color: lime;
+}
+input[type=text], select 
+{
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+input[type=reset] 
+{
+    width: 100%;
+    background-color: #E77306;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset]:hover 
+{
+    background-color: #FC0000;
+}
+</style>
+    </head>
+        
+     <body background="workspace_background-wallpaper-1366x768.jpg" >
+            
+<h1><center><b><marquee direction="right">Welcome new customers</marquee></b></center></h1>
+        
+<ul>
+  <li><a class="active" href="#home">Home&emsp;</a></li>
+  <li><a href="https://www.nasa.gov/sites/default/files/thumbnails/image/assasn-14li_banner.jpg">Market</a></li>
+  <li><a href="#contact">Contact Us</a></li>
+  <li><a href="#support">Support Farmers</a></li>
+  <li><a href="#about">About Us</a></li>
+</ul>
+
+
+            <form name="frm" action="customer_db.php"  onsubmit="return fn()" method="POST">
+                <table width="506" height="10">
+                    
+                    <tr>
+                        <td width="250"><h3><b>First name</b><input type="text" name="first_name" required ></h3></td> 
+                        <td width="250"><h3><b>Middle name</b><input type="text" name="middle_name" required></h3></td>             
+                        <td width="250"><h3><b>Last name</b><input type="text" name="last_name" required></h3></td>
+                   </tr>
+                <br>
+                     </table>
+            
+                    <b><h2>Select gender</h2></b>
+                    <b><h3><input type="radio" name="Gender" value="Male" required> Male
+				    <input type="radio" name="Gender" value="Female" required> Female</h3></b>
+                
+                
+               
+                    <tr>
+                        <td width="250"><h3><b>E-mail</b></h3><input type="text" name="eid" width="default" height="10px" required></td>
+                        <td width="250"><h3><b>Password</b></h3><input type="password" name="pswd" required></td>
+                        <td width="250"><h3><b>Confirm Password</b></h3><input type="password" name="cpswd" required></td>
+                        <td><h3><b>Enter DOB</b></h3><input type="date" name="DOB" required></td>
+                        <td><h3><b>Enter ph no</b></h3><input type="text" name="mpno" width="default" height="10px" required></td>
+                    </tr>
+                   
+                    <tr>
+                        <h3>State</h3>
+                        <select name="state" size="1">
+                        
+                        <option value="Select a State" selected>Select a State</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhyapradesh">Madhyapradesh</option>
+                        <option value="Gujarat">Gujarat</option>
+                       
+                        </select>
+                            
+                    </tr>
+            
+
+                    
+             </table>
+            </form>
+        </body>
+			<br><br>
+            <input type="submit" value="Submit"> &nbsp&nbsp
+            <center><input type="reset" value="Reset"></center>
+           
+     		</form>
+
+
+
+<br>
+
+
+</body>
+
+</html>
